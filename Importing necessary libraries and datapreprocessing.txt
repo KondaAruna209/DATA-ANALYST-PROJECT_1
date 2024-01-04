@@ -1,0 +1,11 @@
+import pandas as pd
+import numpy as np
+import folium
+import matplotlib.pyplot as plt
+from sklearn.preprocessing import LabelEncoder
+import seaborn as sns
+
+df = pd.read_csv('Employee.csv')
+
+df.head()
+df.tail()
