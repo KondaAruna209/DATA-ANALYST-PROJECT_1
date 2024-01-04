@@ -1,0 +1,27 @@
+# Most common degrees for the bar chart
+degrees_distribution = df['Education'].value_counts()
+
+# Plotting a bar chart for degrees
+plt.figure(figsize=(10, 6))
+degrees_distribution.plot(kind='bar', color='skyblue')
+plt.title('Most Common Degrees Among Employees')
+plt.xlabel('Degree')
+plt.ylabel('Number of Employees')
+plt.xticks(rotation=0)
+plt.show()
+
+# Check if 'Institution' column exists in the dataset
+if 'Institution' in df.columns:
+    # Most common institutions for the bar chart
+    institutions_distribution = df['Institution'].value_counts()
+
+    # Plotting a bar chart for institutions
+    plt.figure(figsize=(12, 6))
+    institutions_distribution.head(10).plot(kind='bar', color='lightcoral')  # Displaying the top 10 institutions
+    plt.title('Most Common Institutions Among Employees')
+    plt.xlabel('Institution')
+    plt.ylabel('Number of Employees')
+    plt.xticks(rotation=45, ha='right')
+    plt.show()
+else:
+    print("No 'Institution' column in the dataset.")

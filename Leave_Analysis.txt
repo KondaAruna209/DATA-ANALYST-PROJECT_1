@@ -1,0 +1,6 @@
+# Visualizing the correlation matrix as a heatmap
+correlation_matrix = df[['Age', 'ExperienceInCurrentDomain', 'LeaveOrNot']].corr()
+plt.figure(figsize=(10, 6))
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt=".2f")
+plt.title('Correlation Heatmap - Age, Experience, LeaveOrNot')
+plt.show()

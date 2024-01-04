@@ -1,0 +1,12 @@
+# City-wise distribution for the bar chart
+city_distribution = df['City'].value_counts()
+
+
+#Plotting a bar chart
+plt.figure(figsize=(10, 6))
+city_distribution.plot(kind='bar', color='skyblue')
+plt.title('City-wise Distribution of Employees')
+plt.xlabel('City')
+plt.ylabel('Number of Employees')
+plt.xticks(rotation=45, ha='right')
+plt.show()

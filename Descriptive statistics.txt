@@ -1,0 +1,15 @@
+# Calculate descriptive statistics
+
+average_age = df['Age'].mean()
+print(f"Average Age: {average_age:.2f} years")
+
+
+# Calculating average experience in current domain
+
+average_experience = df['ExperienceInCurrentDomain'].mean()
+print(f"Average Experience in Current Domain: {average_experience:.2f} years")
+
+# Average years since joining for the entire workforce.
+
+average_years_since_joining = pd.Timestamp.now().year - df['JoiningYear'].mean()
+print(f"Average Years Since Joining: {average_years_since_joining:.2f} years")

@@ -1,0 +1,7 @@
+gender_distribution = df['Gender'].value_counts()
+
+# Plotting a pie chart
+plt.figure(figsize=(8, 8))
+plt.pie(gender_distribution, labels=gender_distribution.index, autopct='%1.1f%%', colors=['skyblue', 'lightcoral'])
+plt.title('Gender Distribution within the Company')
+plt.show()
